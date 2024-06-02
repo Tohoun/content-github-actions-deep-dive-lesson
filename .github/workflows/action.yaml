@@ -3,7 +3,7 @@ name: Deploy my Lambda Function2
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   build:
