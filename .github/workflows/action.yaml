@@ -1,4 +1,4 @@
-name: Deploy my Lambda Function2
+name: Deploy my Lambda Function
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
       - name: Create zip bundle
         run: |
              cd function
-             zip ../${{ github.sha }}.zip .
+             zip -r ../${{ github.sha }}.zip .
       - name: Archieve artifact
         uses: actions/upload-artifact@v2
         with:
